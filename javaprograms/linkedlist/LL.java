@@ -1,9 +1,9 @@
 package javaprograms.linkedlist;
 
 public class LL {
-    private Node head;
-    private Node tail;
-    private int size;
+    public Node head;
+    public Node tail;
+    public int size;
 
     class Node {
         public int value;
