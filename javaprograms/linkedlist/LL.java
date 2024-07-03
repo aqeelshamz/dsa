@@ -73,6 +73,33 @@ public class LL {
         size++;
     }
 
+    public void recursiveInsert(int value, int index) {
+        if (index <= 0) {
+            insertFirst(value);
+            return;
+        }
+
+        if (index >= size - 1) {
+            insertLast(value);
+            return;
+        }
+
+        recursiveInsert(value, index - 1, head);
+    }
+
+    public void recursiveInsert(int value, int index, Node node) {
+        if (index == 0) {
+            Node newNode = new Node(value);
+            newNode.next = node.next;
+            node.next = newNode;
+            size++;
+            return;
+        }
+
+        node = node.next;
+        recursiveInsert(value, index - 1, node);
+    }
+
     public Node get(int index) {
         Node node = head;
         for (int i = 0; i < index; i++) {
@@ -142,6 +169,7 @@ public class LL {
         ll.insertLast(17);
         ll.insertLast(55);
         ll.insert(10, 3);
+        ll.recursiveInsert(99, 1);
         ll.display();
     }
 }
