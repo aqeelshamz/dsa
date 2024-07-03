@@ -1,7 +1,5 @@
 package practice.dynamic;
 
-import java.util.HashMap;
-
 public class Fib1 {
     public static int fib(int n) {
         int first = 0;
