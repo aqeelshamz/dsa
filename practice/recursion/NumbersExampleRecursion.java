@@ -1,4 +1,4 @@
-package recursion;
+package practice.recursion;
 
 public class NumbersExampleRecursion {
     public static void main(String[] args) {

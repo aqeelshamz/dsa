@@ -1,4 +1,4 @@
-package dynamic;
+package practice.dynamic;
 
 import java.math.BigInteger;
 import java.util.HashMap;
